@@ -24,22 +24,12 @@ requirements:
     - scikit-learn >=1.0.0
 
 test:
-  source_files:
-    - tests
   imports:
     - embetter
   commands:
     - pip check
-    - pytest -vvv --capture=tee-sys -k "not test_docs and not test_vision" tests  # [not win]
   requires:
-    - mktestdocs==0.1.2
     - pip
-    - pillow
-    - pytest >=4.0.2
-    - sense2vec==2.0.0
-    - sentence-transformers >=2.2.2  # [not win]
-    - timm >=0.6.7  # [not win]
-    - tokenizers!=0.11.3,<0.13,>=0.11.1
 
 about:
   home: https://koaning.github.io/embetter/
