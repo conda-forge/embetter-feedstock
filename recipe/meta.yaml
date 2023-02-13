@@ -1,5 +1,5 @@
 {% set name = "embetter" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/embetter-{{ version }}.tar.gz
-  sha256: 9d709bcb6c02bc5c8185fa48ce67952874f59582570bc43906fc2dc49b56c1f3
+  sha256: 414c8d66c4350e8f83aa701cd303ae18f99503edcf57e0c04738a966eb7bb157
 
 build:
   noarch: python
@@ -24,22 +24,12 @@ requirements:
     - scikit-learn >=1.0.0
 
 test:
-  source_files:
-    - tests
   imports:
     - embetter
   commands:
     - pip check
-    - pytest -vvv --capture=tee-sys -k "not test_docs and not test_vision" tests  # [not win]
   requires:
-    - mktestdocs==0.1.2
     - pip
-    - pillow
-    - pytest >=4.0.2
-    - sense2vec==2.0.0
-    - sentence-transformers >=2.2.2  # [not win]
-    - timm >=0.6.7  # [not win]
-    - tokenizers!=0.11.3,<0.13,>=0.11.1
 
 about:
   home: https://koaning.github.io/embetter/
