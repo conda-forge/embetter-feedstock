@@ -1,11 +1,11 @@
-About embetter
-==============
+About embetter-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/embetter-feedstock/blob/main/LICENSE.txt)
 
 Home: https://koaning.github.io/embetter/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/embetter-feedstock/blob/main/LICENSE.txt)
 
 Summary: Scikit-learn compatible embeddings for computer vision and text
 
