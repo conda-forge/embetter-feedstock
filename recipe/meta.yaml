@@ -17,11 +17,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python >=3.6
   run:
     - diskcache >=5.6.1
     - pandas >=1.0.0
-    - python >=3.7
+    - python >=3.6
     - scikit-learn >=1.0.0
 
 test:
