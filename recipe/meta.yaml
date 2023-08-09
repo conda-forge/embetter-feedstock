@@ -1,5 +1,5 @@
 {% set name = "embetter" %}
-{% set version = "0.5.0" %}
+{% set version = "0.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/embetter-{{ version }}.tar.gz
-  sha256: a3e52dc84f4b7229f101f56b36e9902e640276e3f21ecc2e2c986a476d2262ad
+  sha256: b3378bf7221288621dec02a2df6b62a23bd4f278b1a6adeb5678703bfbe6bc46
 
 build:
   noarch: python
