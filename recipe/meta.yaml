@@ -1,5 +1,5 @@
 {% set name = "embetter" %}
-{% set version = "0.6.0" %}
+{% set version = "0.6.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/embetter-{{ version }}.tar.gz
-  sha256: dc12c4a8915ec65b68cdd3533cfe4b289ddbf851b2b924f07c745f306c49c6c8
+  sha256: f6d2d10b81e96d7cd4fab610e7ad2b298107fa60c4aa88baef46f657a54342ff
 
 build:
   noarch: python
@@ -18,12 +18,16 @@ requirements:
   host:
     - pip
     - python >=3.7
+    - setuptools
   run:
     - python >=3.7
     - scikit-learn >=1.0.0
     - pandas >=1.0.0
     - diskcache >=5.6.1
     - skops >=0.8.0
+    - sentence-transformers >=2.2.2
+    # For sentence-transformers 3.0.1
+    - transformers <5.0.0,>=4.34.0
 
 test:
   imports:
