@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/embetter-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/embetter-{{ version }}.tar.gz
   sha256: f6d2d10b81e96d7cd4fab610e7ad2b298107fa60c4aa88baef46f657a54342ff
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
     - setuptools
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - scikit-learn >=1.0.0
     - pandas >=1.0.0
     - diskcache >=5.6.1
@@ -36,6 +36,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://koaning.github.io/embetter/
