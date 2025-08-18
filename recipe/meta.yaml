@@ -26,8 +26,11 @@ requirements:
     - diskcache >=5.6.1
     - skops >=0.8.0
     - sentence-transformers >=2.2.2
+    - model2vec
     # For sentence-transformers 3.0.1
     - transformers <5.0.0,>=4.34.0
+    # model2vec has dependency on lightning which pins packaging<25.0,>=17.1
+    - packaging <25.0,>=17.1
 
 test:
   imports:
