@@ -1,5 +1,5 @@
 {% set name = "embetter" %}
-{% set version = "0.6.5" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/embetter-{{ version }}.tar.gz
-  sha256: 2e947474ce3b8f859d04facaa2f0edbd58650071c07a6b0e59482079edb5028f
+  sha256: b635e1ca2a13ffb31bff85ba63d02ec6095f37e3f225bf80f6296a83c3a52380
 
 build:
   noarch: python
@@ -26,8 +26,11 @@ requirements:
     - diskcache >=5.6.1
     - skops >=0.8.0
     - sentence-transformers >=2.2.2
+    - model2vec
     # For sentence-transformers 3.0.1
     - transformers <5.0.0,>=4.34.0
+    # model2vec has dependency on lightning which pins packaging<25.0,>=17.1
+    - packaging <25.0,>=17.1
 
 test:
   imports:
