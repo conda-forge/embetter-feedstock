@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: embetter
-  version: 0.8.0
+  version: "0.9.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/embetter-${{ version }}.tar.gz
-  sha256: 9b316f6c162975d570ae9465969f302f0e735973069473971c857053bf32ce1e
+  sha256: c446486eb7228cacc4b673484917d70ce7cd9415814fdca58e3328196c23b957
 
 build:
   number: 0
